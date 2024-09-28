@@ -1,0 +1,87 @@
+.mushroom {
+    width: 100%;
+    background: linear-gradient(
+            180deg,
+            rgba(162, 89, 255, 0),
+            rgb(162, 89, 255) 100%
+        ),
+        url('../img/mushroom-bg.png') center center/cover no-repeat;
+    .mushroom_items {
+        width: 100%;
+        padding-top: 360px;
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        .mushroom_content {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            .mushroom_owner {
+                padding: 10px 20px;
+                border-radius: 20px;
+                background-color: $main-dark;
+                @include owner-style;
+            }
+            .mushroom_title {
+                font-size: 51px;
+                font-weight: 600;
+                line-height: 110%;
+                text-transform: capitalize;
+                color: #fff;
+                margin-top: 30px;
+            }
+            .mushroom_btn {
+                @include fill-btn-style;
+                padding: 19px 50px;
+                background-color: #fff;
+                border-color: #fff;
+                color: #000;
+                font-weight: 600;
+                margin-top: 30px;
+                i {
+                    color: $main-purple;
+                }
+                &:hover {
+                    color: #fff;
+                    i {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .mushroom_time {
+            width: 295px;
+            padding: 30px;
+            background: #3B3B3B80;
+            color: #fff;
+            border-radius: 20px;
+            font-family: "Space Mono", monospace;
+            .time_title {
+                font-size: 12px;
+            }
+            .time_content {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                margin-top: 10px;
+                font-size: 28px;
+                font-weight: 700;
+                .time_item {
+                    .time_num {
+                        font-size: 38px;
+                    }
+                    .time_name {
+                        font-size: 12px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        .mushroom_small_btn {
+            display: none;
+        }
+    }
+}

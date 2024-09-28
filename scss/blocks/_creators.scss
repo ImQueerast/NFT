@@ -1,0 +1,68 @@
+.creators {
+    width: 100%;
+    .creators_items {
+        width: 100%;
+        padding: 80px 0;
+        .creators_header {
+            @include heading-style;
+        }
+        .creators_content {
+            margin-top: 60px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 30px;
+            .creators_item {
+                padding: 20px;
+                border-radius: 20px;
+                background-color: $dark-gray;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                @include up-animation;
+                .item_num {
+                    height: 30px;
+                    width: 30px;
+                    background-color: $main-dark;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $text-gray;
+                    border-radius: 100%;
+                    font-family: 'Space Mono', monospace;
+                    position: absolute;
+                    left: 20px;
+                    top: 18px;
+                }
+                .item_text {
+                    text-align: center;
+                    margin-top: 20px;
+                    .item_title {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #fff;
+                    }
+                    .item_info {
+                        margin-top: 5px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 10px;
+                        .info_title {
+                            color: $text-gray;
+                        }
+                        .info_value {
+                            font-family: 'Space Mono', monospace;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .creators_small_btn {
+            display: none;
+        }
+    }
+}
